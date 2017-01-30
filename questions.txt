@@ -37,7 +37,7 @@ C. Jerry Rice
 D. Tom Brady
 
 In the Resident Evil series, what virus was responsible for zombifying the Earth's population?
-A. Chemical X
+A. X-virus
 B. T-virus
 C. Z-virus
 D. swine flu
@@ -54,8 +54,8 @@ B. 0h 1m 15s
 C. 2h 45m 56s
 D. 78h 34m 12s
 
-Question the tenth
-A.
-B.
-C.
-D. 
+What is the real name of the Master Chief from the Halo series?
+A. Steve
+B. Roger
+C. John
+D. Bartholomew
