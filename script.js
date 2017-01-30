@@ -1,1 +1,1 @@
-// Make it work
+console.log("Hello")
