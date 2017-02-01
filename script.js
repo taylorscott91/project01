@@ -66,7 +66,7 @@ $(document).ready (function () {
     //  }
   }
   if (score >= 10) {
-    $(".perfect").html("Wow! You know a lot about games! Probably too much. Go read a book.");
+    $(".message").html("Wow! You know a lot about games! Probably too much. Go read a book.");
     }
   // else if (score < 10) {
   //   $(".perfect").html("It's probably okay that you don't know all the answers. You're still a champ!")

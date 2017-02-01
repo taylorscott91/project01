@@ -90,10 +90,11 @@ main {
   color: #ACC7F1;
 }
 
-.perfect {
-  font-family: "Comic Sans";
+.message {
+  font-family: "Comic Sans MS";
   font-weight: bold;
-  font-color: #ACC7F1;
+  color: #ACC7F1;
+  text-align: center;
 }
 
 
