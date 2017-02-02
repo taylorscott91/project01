@@ -44,7 +44,6 @@ $(document).ready (function () {
     function showQuestion () {
       $(".question").html(questions[counter].question);
       $(".answer").val("");
-      // $(".comments").html("");
     }
 
   $(".submit").on("click", scoreThis);
