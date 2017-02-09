@@ -19,3 +19,7 @@ Which is not a piece of the Triforce?A. PowerB. StrengthC. CourageD. Wisdom
 What is the current world record for fastest completion time of the game Super Mario World?A. 0h 58m 27sB. 0h 1m 15sC. 2h 45m 56sD. 78h 34m 12s
 
 What is the real name of the Master Chief from the Halo series?A. SteveB. RogerC. JohnD. Bartholomew
+
+I like what you were going for here. Think about formatting this into a data
+structure (like the one I described in script.js) in this file as javascript (questions.js)
+ and then load it into your HTML as a separate script BEFORE your main script.js

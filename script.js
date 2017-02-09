@@ -1,4 +1,4 @@
-console.log("Hello, welcome to trivia.")
+// Remove any console logs used for testing before you push to production
 
 var questions = [
   {
@@ -33,29 +33,52 @@ var questions = [
     answer: "c"
   }
 ]
-
-var counter = 0;
-var score = 0;
-var input = $(".answer").val();
+// Great use of data structures to contain your question data. Also nice, neat formatting.
+// Only suggestion would be to break the long string containing all of the parts of the question
+// into mutliple properties. This would then allow you use these 'options' to make dynamic
+// DOM elements like buttons for users to submit answers (better UI). Example:
+//
+// {
+//   question: "What is the real name of the Master Chief from the Halo series?",
+//   answer: "c",
+//   options: [
+//     "A. Steve",
+//     "B. Roger",
+//     "C. John",
+//     "D. Bartholomew"
+//   ],
+//   answer: "C. John"
+// }
 
 $(document).ready (function () {
+// since 'var input' links to DOM element, it is best practice in include it INSIDE
+// of your document.ready function to ensure the element it references has been
+// loaded into the DOM.
 
-  $(".questionbutton").on("click", showQuestion);
-    function showQuestion () {
-      $(".question").html(questions[counter].question);
-      $(".answer").val("");
-      // $(".comments").html("");
-    }
+  var counter = 0;
+  var score = 0;
+  var input = $(".answer");
+  // For DOM elements that are going to be reused over and over in your code, like
+  // $('.answer'), assign the ELEMENT to a variable and then just reference the
+  // variable in the rest of your code. This makes it easier if you need to change the
+  // class name in your HTML and CSS because then you only need to update it in one place
+  // in your javascript.
 
-  $(".submit").on("click", scoreThis);
+  // Good semantic naming conventions for your functions and variables ++
+  function showQuestion () {
+    $(".question").html(questions[counter].question);
+    input.val("");
+    // $(".comments").html("");
+  }
+
   function scoreThis () {
-    if ($(".answer").val() == questions[counter].answer) {
+    if (input.val() == questions[counter].answer) {
       $(".text").html("Correct! Click Question to continue.");
       counter++;
       score += 1;
       $(".score").html("Score: " + score);
-      $(".answer").val("");
-          }
+      input.val("");
+    }
     else {
       $(".score").html("Score: " + score);
       $(".text").html("Try again!");
@@ -64,6 +87,8 @@ $(document).ready (function () {
     //    score -= 1;
     //    penalty = 0
     //  }
+    // Try to keep experimental (non-final) code off of the master branch until it is
+    // ready for production)
   }
   if (score >= 10) {
     $(".perfect").html("Wow! You know a lot about games! Probably too much. Go read a book.");
@@ -71,5 +96,16 @@ $(document).ready (function () {
   // else if (score < 10) {
   //   $(".perfect").html("It's probably okay that you don't know all the answers. You're still a champ!")
   //   }
+  // Same here
   }
+
+  $(".submit").on("click", scoreThis);
+  $(".questionbutton").on("click", showQuestion);
+  // A common pattern for organizing your code is to have all variables declared at
+  // the top of your code block (in this case, your document.ready), all functions
+  // grouped together beneath them, and then all event listeners at the bottom of
+  // the code block together. Doesn't matter in terms of functionality here but does
+  // help readibility.
 })
+
+// Overall great code here. It is well formatted, neatly written, semantic, and without bugs. Good job.

@@ -9,6 +9,11 @@ h1 {
   text-align: center;
   background: #333B47;
   color: #ACC7F1;
+  /*since #ACC7F1 is your default 'color' for text, put this property in the selector
+  for the body element (it will be inherited by all the elements beneath it in the
+  Dom tree). Then if you need a specific element to have a different color, you only
+  have to add that 'color' on that specific element (makes your code more DRY). Same goes
+  for any other property that is going to be reused by many elements in your app*/
 }
 h2 {
   text-align: center;
@@ -47,9 +52,8 @@ main {
   padding: 100px;
   background-color: #333B47;
   flex-direction: column;
-
 }
-
+/*Good use of flexbox for formatting your layout*/
 .question {
   background: #333B47;
   color: #ACC7F1;
@@ -73,6 +77,9 @@ main {
   color: #ACC7F1;
   background-color: #333B47;
 }
+/*For css classes that have two words in them, like '.questionbutton', best practice
+is to use spine-case. Ex: '.question-button'*/
+
 .submit {
   margin: 0 auto;
   position: relative;
