@@ -6,29 +6,33 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-  <div class="flex">
-    <div class="top">
-      <h1>Useless Video Game Trivia Challenge!</h1>
-      <h2 class="score">Score:</h2>
-      <br>
-      <p class="text"></p>
-    </div>
+    <div class="flex">
+      <div class="top">
+        <h1>Useless Video Game Trivia Challenge!</h1>
+        <h2 class="score">Score:</h2>
+        <!-- You don't need a br tag here, h2 and p are block elements and will
+        automatically force a line break -->
+        <p class="text"></p>
+      </div>
 
-    <main>
-      <div class="question">Do you know a lot of random facts about video games? Let's find out!<br><br>Press the Question button to begin!</div>
-    </main>
-    <div class="bottom">
-      <button class="questionbutton">Question</button>
-      <br>
-      <br>
-      <input class="answer">
-      <br>
-      <br>
-      <button class="submit">Submit</button>
-      <br>
-      <div class="perfect"></div>
+      <main>
+        <div class="question">Do you know a lot of random facts about video games? Let's find out!<br><br>Press the Question button to begin!</div>
+      </main>
+      <div class="bottom">
+        <button class="questionbutton">Question</button>
+        <br>
+        <br>
+        <!-- Try to use CSS for layout control instead of br tags. To do so, you could
+        make these buttons and inputs into block elements with 'display: block;'
+        in your CSS (will make your HTML more DRY) -->
+        <input class="answer">
+        <br>
+        <br>
+        <button class="submit">Submit</button>
+        <br>
+        <div class="perfect"></div>
+      </div>
     </div>
-  </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="script.js"></script>
