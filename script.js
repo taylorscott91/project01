@@ -31,44 +31,47 @@ var questions = [
   }, {
     question: "What is the real name of the Master Chief from the Halo series?<br><br>A. Steve<br>B. Roger<br>C. John<br>D. Bartholomew",
     answer: "c"
+  }, {
+    question: "GAME<br>OVER",
+    answer: "a"
   }
 ]
 
-var counter = 0;
+var counter = -1;
 var score = 0;
 var input = $(".answer").val();
 
-$(document).ready (function () {
+$(document).ready (function () { //VMC: maybe encapsulate entire script to prevent populating/cluttering global scope
 
   $(".questionbutton").on("click", showQuestion);
-    function showQuestion () {
-      $(".question").html(questions[counter].question);
-      $(".answer").val("");
-    }
+  function showQuestion () { //VMC: moved this back one space so indenting is even
+    counter++;
+    $(".question").html(questions[counter].question);
+    $(".answer").val("");
+  }
 
   $(".submit").on("click", scoreThis);
   function scoreThis () {
     if ($(".answer").val() == questions[counter].answer) {
       $(".text").html("Correct! Click Question to continue.");
-      counter++;
       score += 1;
       $(".score").html("Score: " + score);
       $(".answer").val("");
-          }
+    }
     else {
       $(".score").html("Score: " + score);
-      $(".text").html("Try again!");
-    //   counter++
-    //   if (penalty == 2) {
-    //    score -= 1;
-    //    penalty = 0
-    //  }
-  }
-  if (score >= 10) {
-    $(".message").html("Wow! You know a lot about games! Probably too much. Go read a book.");
+      $(".text").html("Try again! Or move along.");
+      if( score > 0) {
+        score -= 1;
+        $(".score").html("Score: " + score);
+      }
     }
-  // else if (score < 10) {
-  //   $(".perfect").html("It's probably okay that you don't know all the answers. You're still a champ!")
-  //   }
+
+    if (score >= 10) {
+      $(".message").html("Wow! You know a lot about games! Probably too much. Go read a book.");
+    }
+    else if (counter >= 9 && score < 10) {
+      $(".message").html("It's probably okay that you don't know all the answers. You're still a champ!")
+    }
   }
-})
+});

@@ -5,11 +5,13 @@ body {
   margin: 0 10 0 10;
   font-family: "Courier New"
 }
+
 h1 {
   text-align: center;
   background: #333B47;
   color: #ACC7F1;
 }
+
 h2 {
   text-align: center;
   background: #333B47;
@@ -47,7 +49,6 @@ main {
   padding: 100px;
   background-color: #333B47;
   flex-direction: column;
-
 }
 
 .question {
@@ -58,12 +59,14 @@ main {
   font-weight: bold;
   margin: 10px 0 20px 0;
 }
+
 .answer {
   position: relative;
   top: 50%;
   left: 41%;
   color: #ACC7F1;
 }
+
 .questionbutton {
   position: relative;
   top: 50%;
@@ -73,6 +76,7 @@ main {
   color: #ACC7F1;
   background-color: #333B47;
 }
+
 .submit {
   margin: 0 auto;
   position: relative;
